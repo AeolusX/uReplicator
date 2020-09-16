@@ -50,7 +50,8 @@ import org.apache.helix.model.builder.HelixConfigScopeBuilder;
 import org.apache.helix.store.zk.ZkHelixPropertyStore;
 
 public class HelixUtils {
-
+  private static final Logger LOGGER =
+      LoggerFactory.getLogger(HelixUtils.class);
   private static final String BLACKLIST_TAG = "blacklisted";
 
   public static String getAbsoluteZkPathForHelix(String zkBaseUrl) {
